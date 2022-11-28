@@ -2,6 +2,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Component } from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap'
+import MovieCard from './components/MovieCard'
 
 class App extends Component {
   state = {
@@ -35,6 +36,12 @@ class App extends Component {
                   </Form.Control>
                 </Form.Group>
               </Form>
+            </Col>
+          </Row>
+          <Row className="justify-content-center mt-4">
+            <Col xs={12} md={6} className="text-dark">
+              {/* MovieCard goes here! */}
+              <MovieCard selectedMovieTitle={this.state.selectedMovieTitle} />
             </Col>
           </Row>
         </Container>
